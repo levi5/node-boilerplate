@@ -4,13 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx ./src/main/app.ts ",
+    "dev": "npm run start watch",
+    "build": "tsup src --publicDir build --config './settings/tsup/tsup.config.ts'",
+    "test:unit": "vitest --config './settings/vitest/unit.vitest.config.ts'",
+    "test:integration": "vitest --config './settings/vitest/integration.vitest.config.ts'",
+    "coverage": "vitest run --coverage --config './settings/vitest/coverage.vitest.config.ts'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "typescript": "^5.6.3"
+    "@types/node": "^22.9.0",
+    "@vitest/coverage-v8": "2.1.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@fastify/swagger": "^9.3.0",
+    "@fastify/swagger-ui": "^5.1.0",
+    "fastify": "^5.1.0",
+    "funcio": "0.0.25"
   }
 }
