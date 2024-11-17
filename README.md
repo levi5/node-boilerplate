@@ -10,6 +10,7 @@ A starter template for building **Node.js** applications with best practices and
 - 🌍 **Environment Management**: Centralized `.env` configuration using `dotenv`.
 - ✅ **Test-Ready**: Integrated setup for unit and integration testing with `Vitest`.
 - 🛠️ **Clean Architecture**: Organized project structure with a clear separation of concerns.
+- 📄 **Swagger API Documentation**: Automatically generates API documentation using Swagger for easy integration and understanding of the endpoints.
 
 ## 🛡️ Prerequisites
 
@@ -73,7 +74,7 @@ node-boilerplate/
 │   │   ├── protocols/   # Interfaces and contracts used in the presentation layer
 │   ├── domain/          # Core business logic and entities
 │   ├── infra/           # External frameworks, databases, and services
-│   ├── tests/           # Unit and integration tests
+├── tests/               # Unit and integration tests
 ├── settings/
 │   ├── tsup/           # TSUP build configurations
 │   ├── vitest/         # Vitest configurations
@@ -88,4 +89,4 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](./LICENSE.txt).
