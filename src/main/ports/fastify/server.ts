@@ -41,16 +41,16 @@ registerRoutes(application).catch((error) => {
 })
 
 const start = async () => {
-	application.listen({ port }, (err, address) => {
-		if (err) {
-			console.error(err)
-			process.exit(1)
-		}
+	application.listen({ port, host: '0.0.0.0' }, (err, address) => {
+    if (err) {
+        console.error(err);
+        process.exit(1);
+    }
 
-		console.info(
-			`${green(bold('🚀'))} ${bgGreen(black(bold('🟢 Server listening at ')))} ${bgYellow(black(underline(cyan(address + prefix))))} ${magenta('🔗')}`,
-		)
-	})
+    console.info(
+        `${green(bold('🚀'))} ${bgGreen(black(bold('🟢 Server listening at ')))} ${bgYellow(black(underline(cyan(address + prefix))))} ${magenta('🔗')}`,
+    );
+})
 }
 
 export const server = { start }
