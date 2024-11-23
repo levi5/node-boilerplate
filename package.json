@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development tsx --env-file .env ./src/main/app.ts",
+    "start": "NODE_ENV=development tsx --watch --env-file .env ./src/main/app.ts",
     "dev": "npm run start watch",
     "build": "NODE_ENV=production  tsup src --publicDir build --config './settings/tsup/tsup.config.ts'",
     "test:unit": "vitest --config './settings/vitest/unit.vitest.config.ts'",
@@ -18,6 +18,7 @@
     "@biomejs/biome": "1.9.4",
     "@types/node": "^22.9.0",
     "@vitest/coverage-v8": "2.1.5",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "vitest": "^2.1.5"
   },
