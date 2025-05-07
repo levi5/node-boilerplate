@@ -1,3 +1,4 @@
+import { jsonSchemaTransform } from 'fastify-type-provider-zod'
 import { join } from 'node:path'
 
 export const swaggerOptions = {
@@ -6,6 +7,7 @@ export const swaggerOptions = {
 		path: join(__dirname, '..', '..', '..', '..', 'settings', 'swagger', 'swagger.json'),
 		postProcessor: (swaggerObject: unknown) => swaggerObject,
 		baseDir: './src',
+		transform: jsonSchemaTransform,
 	},
 	swaggerUIOptions: {
 		routePrefix: '/docs',
