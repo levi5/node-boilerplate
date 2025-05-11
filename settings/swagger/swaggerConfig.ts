@@ -1,16 +1,29 @@
 import { jsonSchemaTransform } from 'fastify-type-provider-zod'
-import { join } from 'node:path'
-
 export const swaggerOptions = {
-	mode: 'static',
 	specification: {
-		path: join(__dirname, '..', '..', '..', '..', 'settings', 'swagger', 'swagger.json'),
-		postProcessor: (swaggerObject: unknown) => swaggerObject,
-		baseDir: './src',
+		openapi: {
+			openapi: '3.0.0',
+			info: {
+				title: 'API',
+				description: 'API [Description]',
+				version: '1.0.0',
+			},
+			servers: [
+				{
+					url: 'http://localhost:3001',
+					description: 'Development server',
+				},
+			],
+		},
+
 		transform: jsonSchemaTransform,
 	},
 	swaggerUIOptions: {
 		routePrefix: '/docs',
-		swagger: '/swagger.json',
+		uiConfig: {
+			docExpansion: 'list',
+			documentTitle: 'Minha API',
+		},
+		theme: { title: 'API' },
 	},
 }
