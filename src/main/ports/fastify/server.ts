@@ -1,8 +1,9 @@
 import { _Maybe } from 'funcio'
-import { green, bold, bgGreen, black, magenta, underline, cyan, bgYellow } from 'colorette'
+import { green, bold, bgGreen, black, magenta, underline, cyan, bgYellow, bgBlue } from 'colorette'
 import { serializerCompiler, validatorCompiler, type ZodTypeProvider } from 'fastify-type-provider-zod'
 import cors from '@fastify/cors'
 import fastify, { type FastifyInstance } from 'fastify'
+import ScalarApiReference from '@scalar/fastify-api-reference'
 
 import { statusRoute } from '@routes'
 import { environmentVariable } from '@settings/env'
@@ -31,7 +32,14 @@ void application.setSerializerCompiler(serializerCompiler)
 
 if (NODE_ENV === 'development') {
 	application.register(require('@fastify/swagger'), swaggerOptions.specification)
-	application.register(require('@fastify/swagger-ui'), swaggerOptions.swaggerUIOptions)
+	application.register(ScalarApiReference, {
+		configuration: {
+			layout: 'modern',
+			darkMode: true,
+			theme: 'purple',
+		},
+		routePrefix: '/docs',
+	})
 }
 
 // Routes
@@ -51,7 +59,7 @@ const start = async () => {
 		}
 
 		console.info(
-			`${green(bold('🚀'))} ${bgGreen(black(bold('🟢 Server listening at ')))} ${bgYellow(black(underline(cyan(address + prefix))))} ${magenta('🔗')}`,
+			`${green(bold('🚀'))} ${bgGreen(black(bold('🟢 Server listening at ')))}${bgYellow(black(underline(cyan(address + prefix))))}  ${bgBlue(black(underline(cyan(`${address}/docs`))))} ${magenta('🔗')}`,
 		)
 	})
 }
