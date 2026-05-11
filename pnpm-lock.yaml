@@ -33,8 +33,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2(fastify@5.3.3)(zod@3.25.47)
       funcio:
-        specifier: 0.0.28
-        version: 0.0.28
+        specifier: 0.0.29
+        version: 0.0.29
       tsup:
         specifier: ^8.4.0
         version: 8.5.0(postcss@8.5.3)(tsx@4.21.0)(typescript@5.8.3)(yaml@2.8.0)
@@ -1099,8 +1099,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  funcio@0.0.28:
-    resolution: {integrity: sha512-aRs9eFzTxEIdcrFmquSWib3My2HSClqWo9teUW7rkyuEtmuCUPY8+Ij4Mvnr4JEndtWerJO11kUixXnh2TVIdw==}
+  funcio@0.0.29:
+    resolution: {integrity: sha512-AWBg62c7zTDrZDIOzoymyj9ZFm3tjECSGEteG+VEBTE5iJjqkYNUN+vCG3P6/vfChkl+PlM7jpPxm2iGuvpMgg==}
 
   get-tsconfig@4.14.0:
     resolution: {integrity: sha512-yTb+8DXzDREzgvYmh6s9vHsSVCHeC0G3PI5bEXNBHtmshPnO+S5O7qgLEOn0I5QvMy6kpZN8K1NKGyilLb93wA==}
@@ -2543,7 +2543,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  funcio@0.0.28: {}
+  funcio@0.0.29: {}
 
   get-tsconfig@4.14.0:
     dependencies:
