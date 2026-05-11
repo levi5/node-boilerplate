@@ -24,8 +24,8 @@ importers:
         specifier: 2.0.20
         version: 2.0.20
       dotenv:
-        specifier: ^16.5.0
-        version: 16.5.0
+        specifier: ^17.4.2
+        version: 17.4.2
       fastify:
         specifier: ^5.3.2
         version: 5.8.5
@@ -1015,8 +1015,8 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
-  dotenv@16.5.0:
-    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+  dotenv@17.4.2:
+    resolution: {integrity: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==}
     engines: {node: '>=12'}
 
   eastasianwidth@0.2.0:
@@ -2410,7 +2410,7 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  dotenv@16.5.0: {}
+  dotenv@17.4.2: {}
 
   eastasianwidth@0.2.0: {}
 
